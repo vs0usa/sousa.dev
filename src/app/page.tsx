@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
           width={200}
           height={200}
           sizes="100vw"
+          unoptimized
         />
       </div>
       <div className="flex flex-col items-center sm:gap-y-6 text-gray-100">
@@ -18,5 +19,5 @@ export default function Home() {
         <h3 className="text-xl">w/.</h3>
       </div>
     </main>
-  )
+  );
 }
