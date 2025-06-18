@@ -20,7 +20,7 @@ jobs:
         run: bun install
 
       - name: Knip
-        run: pnpm knip
+        run: bun knip
 
   check:
     runs-on: ubuntu-latest
@@ -34,7 +34,7 @@ jobs:
         run: bun install
 
       - name: Check
-        run: pnpm check
+        run: bun check
 
   typecheck:
     runs-on: ubuntu-latest
