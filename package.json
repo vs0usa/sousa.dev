@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@cloudflare/next-on-pages": "^1.11.0",
+    "@cloudflare/next-on-pages": "^1.13.12",
     "@cloudflare/workers-types": "^4.20240405.0",
     "@types/node": "^20",
     "@types/react": "^18",
