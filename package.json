@@ -27,7 +27,7 @@
     "@biomejs/biome": "2.0.5",
     "@cloudflare/next-on-pages": "^1.13.12",
     "@cloudflare/workers-types": "^4.20250620.0",
-    "@types/node": "^24.0.3",
+    "@types/node": "^24.0.10",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "knip": "^5.61.2",
