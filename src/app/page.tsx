@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col sm:flex-row min-h-screen items-center justify-center gap-y-8 sm:gap-x-36 bg-black">
+    <main className="flex flex-col sm:flex-row min-h-screen items-center justify-center gap-y-8 sm:gap-x-36">
       <div>
         <Image
           src="/cat.gif"
