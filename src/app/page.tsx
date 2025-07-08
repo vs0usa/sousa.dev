@@ -2,6 +2,7 @@ import Image from "next/image";
 import { VSousaLogo } from "@/components/icons/vs0usa-logo";
 import { DotPattern } from "@/components/patterns/dot-pattern";
 import { LinePattern } from "@/components/patterns/line-pattern";
+import { FlipFlags } from "@/components/ui/flip-flags";
 import { FlipText } from "@/components/ui/flip-text";
 
 export default function Page() {
@@ -12,9 +13,10 @@ export default function Page() {
         <VSousaLogo className="h-20" />
       </div>
       <div className="flex screen-lines">
-        <div className="border-x my-px p-[3]">
+        <div className="border-x my-px p-[3] relative overflow-clip">
+          <FlipFlags />
           <Image
-            className="rounded-full size-32 md:size-40 ring ring-offset-2 ring-offset-default ring-neutral-600 z-40 min-w-32 object-cover md:min-w-40"
+            className="rounded-full size-32 md:size-40 ring ring-offset-2 ring-offset-default ring-neutral-700 z-40 min-w-32 object-cover md:min-w-40"
             src="/photo.jpg"
             width={256}
             height={256}
