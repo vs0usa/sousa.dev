@@ -2,6 +2,7 @@ import Image from "next/image";
 import { VSousaLogo } from "@/components/icons/vs0usa-logo";
 import { DotPattern } from "@/components/patterns/dot-pattern";
 import { LinePattern } from "@/components/patterns/line-pattern";
+import { FlipText } from "@/components/ui/flip-text";
 
 export default function Page() {
   return (
@@ -20,7 +21,7 @@ export default function Page() {
             alt="Vitor Sousa's photo"
           />
         </div>
-        <div className="border-r w-full flex justify-end flex-col">
+        <div className="border-r w-full flex justify-end flex-col overflow-y-hidden">
           <div className="relative flex grow items-end">
             <LinePattern />
             <p className="z-10 text-subtle/10 text-xs pl-4 font-mono line-clamp-1">
@@ -30,7 +31,10 @@ export default function Page() {
           <h3 className="pl-4 border-y text-3xl font-semibold py-1">
             Vitor Sousa
           </h3>
-          <p className="pl-4 text-subtle py-1">Software Developer</p>
+          <FlipText
+            className="pl-4 text-subtle py-1 font-mono text-sm"
+            items={["Développeur fullstack", "Écrire le monde en lignes"]}
+          />
         </div>
       </div>
     </div>
