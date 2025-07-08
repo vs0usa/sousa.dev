@@ -6,7 +6,7 @@ export const VSousaLogo = ({
   ...props
 }: SVGProps<SVGSVGElement>) => (
   <svg
-    className={cn("fill-black w-fit", className)}
+    className={cn("fill-white w-fit", className)}
     xmlns="http://www.w3.org/2000/svg"
     width={500}
     height={171}

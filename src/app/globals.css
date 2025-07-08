@@ -25,6 +25,10 @@
   body {
     @apply bg-default;
   }
+
+  * {
+    @apply text-default border-default;
+  }
 }
 
 @layer components {
@@ -33,7 +37,7 @@
 
     @variant before {
       top: 0;
-      z-index: 100;
+      z-index: 30;
       background-color: var(--border-default);
       width: 200vw;
       height: 1px;
@@ -43,7 +47,7 @@
 
     @variant after {
       bottom: 0;
-      z-index: 100;
+      z-index: 30;
       background-color: var(--border-default);
       width: 200vw;
       height: 1px;
