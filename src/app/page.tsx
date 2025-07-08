@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { VSousaLogo } from "@/components/icons/vs0usa-logo";
 import { DotPattern } from "@/components/patterns/dot-pattern";
 import { LinePattern } from "@/components/patterns/line-pattern";
@@ -11,7 +12,13 @@ export default function Page() {
       </div>
       <div className="flex screen-lines">
         <div className="border-x my-px p-[3]">
-          <span className="block rounded-full size-32 md:size-40 bg-amber-900 ring ring-offset-2 ring-offset-default ring-neutral-600 z-40" />
+          <Image
+            className="rounded-full size-32 md:size-40 ring ring-offset-2 ring-offset-default ring-neutral-600 z-40 min-w-32 object-cover md:min-w-40"
+            src="/photo.jpg"
+            width={256}
+            height={256}
+            alt="Vitor Sousa's photo"
+          />
         </div>
         <div className="border-r w-full flex justify-end flex-col">
           <div className="relative flex grow items-end">
