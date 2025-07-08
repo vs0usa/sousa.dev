@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex flex-col sm:flex-row min-h-screen items-center justify-center gap-y-8 sm:gap-x-36">
+    <div className="mx-auto md:max-w-3xl">
       <div>
         <Image
           src="/cat.gif"
@@ -14,10 +14,10 @@ export default function Home() {
           unoptimized
         />
       </div>
-      <div className="flex flex-col items-center sm:gap-y-6 text-gray-100">
-        <h1 className="text-4xl sm:text-6xl font-semibold">rdx</h1>
-        <h3 className="text-xl">w/.</h3>
+      <div className="flex flex-col items-center sm:gap-y-6 ">
+        <h1 className="text-4xl sm:text-6xl font-semibold text-default">rdx</h1>
+        <h3 className="text-xl text-subtle screen-lines">w/ .</h3>
       </div>
-    </main>
+    </div>
   );
 }
