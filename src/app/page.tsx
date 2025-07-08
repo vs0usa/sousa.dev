@@ -11,12 +11,12 @@ export default function Page() {
       </div>
       <div className="flex screen-lines">
         <div className="border-x my-px p-[3]">
-          <span className="block rounded-full size-40 bg-amber-900 ring ring-offset-2 ring-offset-default ring-neutral-600 z-40" />
+          <span className="block rounded-full size-32 md:size-40 bg-amber-900 ring ring-offset-2 ring-offset-default ring-neutral-600 z-40" />
         </div>
         <div className="border-r w-full flex justify-end flex-col">
           <div className="relative flex grow items-end">
             <LinePattern />
-            <p className="z-10 text-subtle/10 text-xs pl-4 font-mono">
+            <p className="z-10 text-subtle/10 text-xs pl-4 font-mono line-clamp-1">
               z-10 text-subtle/10 text-xs pl-4 font-mono
             </p>
           </div>
