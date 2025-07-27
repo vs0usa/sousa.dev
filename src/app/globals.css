@@ -6,6 +6,9 @@
   --text-color-default: var(--text-default);
   --text-color-subtle: var(--text-subtle);
 
+  --stroke-default: var(--text-default);
+  --stroke-subtle: var(--text-subtle);
+
   --border-color-default: var(--border-default);
 }
 

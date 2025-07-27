@@ -4,6 +4,8 @@ import { DotPattern } from "@/components/patterns/dot-pattern";
 import { LinePattern } from "@/components/patterns/line-pattern";
 import { FlipFlags } from "@/components/ui/flip-flags";
 import { FlipText } from "@/components/ui/flip-text";
+import { Separator } from "@/components/ui/separator";
+import { Socials } from "@/components/ui/socials";
 
 export default function Page() {
   return (
@@ -12,7 +14,7 @@ export default function Page() {
         <DotPattern />
         <VSousaLogo className="h-20" />
       </div>
-      <div className="flex screen-lines">
+      <div className="flex screen-lines after:hidden">
         <div className="border-x my-px p-[3] relative overflow-clip">
           <FlipFlags />
           <Image
@@ -27,7 +29,7 @@ export default function Page() {
           <div className="relative flex grow items-end">
             <LinePattern />
             <p className="z-10 text-subtle/10 text-xs pl-4 font-mono line-clamp-1">
-              z-10 text-subtle/10 text-xs pl-4 font-mono
+              z-10 text-subtle/10 text-xs pl-4 font-mono line-clamp-1
             </p>
           </div>
           <h3 className="pl-4 border-y text-3xl font-semibold py-1">
@@ -39,6 +41,8 @@ export default function Page() {
           />
         </div>
       </div>
+      <Separator />
+      <Socials />
     </div>
   );
 }
