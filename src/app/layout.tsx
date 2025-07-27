@@ -6,8 +6,11 @@ import { Navbar } from "@/components/ui/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Vitor Sousa",
-  description: "Vitor Sousa's personal website",
+  title: "Vitor Sousa - Développeur fullstack",
+  description: "",
+  appleWebApp: {
+    title: "Vitor Sousa",
+  },
 };
 
 export default function RootLayout({
