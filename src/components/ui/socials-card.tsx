@@ -24,7 +24,16 @@ export const SocialsCard = ({
     )}
     {...props}
   >
-    <Image src={img} className="rounded-xl" width={48} height={48} alt={name} />
+    <div className="relative">
+      <Image
+        src={img}
+        className="rounded-xl"
+        width={48}
+        height={48}
+        alt={name}
+      />
+      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-white/8 ring-inset" />
+    </div>
     <div className="flex-1">
       <h3 className="font-medium group-hover/link:underline underline-offset-4">
         {name}
