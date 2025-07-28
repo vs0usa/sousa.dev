@@ -18,7 +18,7 @@ export default function Page() {
         <div className="border-x my-px p-[3] relative overflow-clip">
           <FlipFlags />
           <Image
-            className="rounded-full size-32 md:size-40 ring ring-offset-2 ring-offset-default ring-neutral-700 z-40 min-w-32 object-cover md:min-w-40"
+            className="rounded-full size-24 md:size-40 ring ring-offset-2 ring-offset-default ring-neutral-700 z-40 min-w-24 object-cover md:min-w-40"
             src="/photo.jpg"
             width={256}
             height={256}
