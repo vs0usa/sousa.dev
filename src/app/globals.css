@@ -2,6 +2,7 @@
 
 @theme inline {
   --color-default: var(--background);
+  --color-subtle: var(--background-subtle);
 
   --text-color-default: var(--text-default);
   --text-color-subtle: var(--text-subtle);
@@ -15,10 +16,11 @@
 :root {
   /* Background */
   --background: hsl(238, 3.8%, 4.3%);
+  --background-subtle: hsl(240, 4.0388%, 15.938%);
 
   /* Text */
   --text-default: hsl(0, 0%, 98%);
-  --text-subtle: hsl(0, 0%, 75%);
+  --text-subtle: hsl(0, 0%, 60%);
 
   /* Border */
   --border-default: hsl(240, 5%, 11%);
