@@ -40,7 +40,7 @@
   .screen-lines {
     position: relative;
 
-    @variant before {
+    &:before {
       top: 0;
       z-index: 30;
       background-color: var(--border-default);
@@ -50,7 +50,7 @@
       left: -100vw;
     }
 
-    @variant after {
+    &:after {
       bottom: 0;
       z-index: 30;
       background-color: var(--border-default);
