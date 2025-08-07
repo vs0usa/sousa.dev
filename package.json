@@ -23,8 +23,8 @@
     "motion": "^12.23.12",
     "next": "15.3.5",
     "postcss": "^8.5.6",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.11"
   },
@@ -33,8 +33,8 @@
     "@cloudflare/workers-types": "^4.20250807.0",
     "@types/country-flag-icons": "^1.2.2",
     "@types/node": "^24.0.10",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
     "knip": "^5.62.0",
     "typescript": "^5.9.2",
     "wrangler": "^4.28.1"
