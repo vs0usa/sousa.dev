@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
+import { IBM_Plex_Sans } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "@/components/ui/navbar"
 
-const inter = Inter({ subsets: ["latin"] })
+const font = IBM_Plex_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Vitor Sousa - Développeur fullstack",
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <Navbar />
         <main className="max-w-screen overflow-x-hidden px-2">{children}</main>
       </body>
