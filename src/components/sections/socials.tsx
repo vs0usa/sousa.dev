@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react"
-import { SocialsCard } from "@/components/ui/socials-card"
 import { cn } from "@/utils/cn"
+import { SocialsCard } from "./socials-card"
 
 export const Socials = ({ className, ...props }: ComponentProps<"div">) => {
   return (

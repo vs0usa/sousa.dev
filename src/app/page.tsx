@@ -2,11 +2,11 @@ import Image from "next/image"
 import { VSousaLogo } from "@/components/icons/vs0usa-logo"
 import { DotPattern } from "@/components/patterns/dot-pattern"
 import { LinePattern } from "@/components/patterns/line-pattern"
+import { MinimalAbout } from "@/components/sections/minimal-about"
+import { Socials } from "@/components/sections/socials"
 import { FlipFlags } from "@/components/ui/flip-flags"
 import { FlipText } from "@/components/ui/flip-text"
-import { MinimalAbout } from "@/components/ui/minimal-about"
 import { Separator } from "@/components/ui/separator"
-import { Socials } from "@/components/ui/socials"
 
 export default function Page() {
   return (

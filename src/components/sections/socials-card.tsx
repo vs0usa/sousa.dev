@@ -19,7 +19,7 @@ export const SocialsCard = ({
 }: Props) => (
   <Link
     className={cn(
-      "sm:border-x p-4 pr-2 flex items-center gap-4 select-none group/link screen-lines odd:before:hidden even:sm:before:hidden odd:border-l-0 even:border-r-0",
+      "sm:border-x p-4 pr-2 flex items-center gap-4 select-none group/link screen-lines odd:before:hidden even:sm:before:hidden odd:border-l-0 even:border-r-0 last:after:hidden sm:after:hidden",
       className,
     )}
     {...props}
