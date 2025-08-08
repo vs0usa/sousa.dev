@@ -1,14 +1,14 @@
-import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import type { ComponentProps } from "react";
-import { cn } from "@/utils/cn";
+import { ArrowUpRight } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import type { ComponentProps } from "react"
+import { cn } from "@/utils/cn"
 
 type Props = ComponentProps<typeof Link> & {
-  name: string;
-  img: string;
-  username: string;
-};
+  name: string
+  img: string
+  username: string
+}
 
 export const SocialsCard = ({
   className,
@@ -42,4 +42,4 @@ export const SocialsCard = ({
     </div>
     <ArrowUpRight className="stroke-subtle size-5 transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
   </Link>
-);
+)

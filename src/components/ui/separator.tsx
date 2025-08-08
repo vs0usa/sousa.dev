@@ -1,6 +1,6 @@
-import type { ComponentProps } from "react";
-import { LinePattern } from "@/components/patterns/line-pattern";
-import { cn } from "@/utils/cn";
+import type { ComponentProps } from "react"
+import { LinePattern } from "@/components/patterns/line-pattern"
+import { cn } from "@/utils/cn"
 
 export const Separator = ({ className, ...props }: ComponentProps<"div">) => {
   return (
@@ -10,5 +10,5 @@ export const Separator = ({ className, ...props }: ComponentProps<"div">) => {
     >
       <LinePattern className="-left-[100vw] w-[200vw]" />
     </div>
-  );
-};
+  )
+}

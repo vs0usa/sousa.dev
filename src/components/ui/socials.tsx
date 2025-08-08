@@ -1,6 +1,6 @@
-import type { ComponentProps } from "react";
-import { SocialsCard } from "@/components/ui/socials-card";
-import { cn } from "@/utils/cn";
+import type { ComponentProps } from "react"
+import { SocialsCard } from "@/components/ui/socials-card"
+import { cn } from "@/utils/cn"
 
 export const Socials = ({ className, ...props }: ComponentProps<"div">) => {
   return (
@@ -20,5 +20,5 @@ export const Socials = ({ className, ...props }: ComponentProps<"div">) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}

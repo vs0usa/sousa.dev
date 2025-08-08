@@ -1,9 +1,9 @@
-import type { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react"
 
 type Props = {
-  icon: LucideIcon;
-  children: React.ReactNode;
-};
+  icon: LucideIcon
+  children: React.ReactNode
+}
 
 export const MinimalAboutItem = ({ icon: Icon, children }: Props) => (
   <div className="flex items-center gap-4 font-mono text-sm">
@@ -12,4 +12,4 @@ export const MinimalAboutItem = ({ icon: Icon, children }: Props) => (
     </div>
     {children}
   </div>
-);
+)

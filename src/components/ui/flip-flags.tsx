@@ -1,21 +1,21 @@
-"use client";
+"use client"
 
-import { FR, PT } from "country-flag-icons/react/3x2";
-import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useState } from "react";
-import { cn } from "@/utils/cn";
+import { FR, PT } from "country-flag-icons/react/3x2"
+import { AnimatePresence, motion } from "motion/react"
+import { useEffect, useState } from "react"
+import { cn } from "@/utils/cn"
 
 export const FlipFlags = () => {
-  const flags = [<FR key="french-flag" />, <PT key="portuguese-flag" />];
-  const [index, setIndex] = useState(0);
+  const flags = [<FR key="french-flag" />, <PT key="portuguese-flag" />]
+  const [index, setIndex] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % flags.length);
-    }, 4000);
+      setIndex((prev) => (prev + 1) % flags.length)
+    }, 4000)
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="absolute -m-[3px]">
@@ -36,5 +36,5 @@ export const FlipFlags = () => {
         </AnimatePresence>
       </div>
     </div>
-  );
-};
+  )
+}

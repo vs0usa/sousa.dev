@@ -1,23 +1,23 @@
-"use client";
+"use client"
 
-import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react";
-import { useEffect, useState } from "react";
-import { cn } from "@/utils/cn";
+import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
+import { useEffect, useState } from "react"
+import { cn } from "@/utils/cn"
 
-type Props = HTMLMotionProps<"p"> & { items: string[] };
+type Props = HTMLMotionProps<"p"> & { items: string[] }
 
 export const FlipText = ({ items, className, ...props }: Props) => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    if (items.length < 2) return;
+    if (items.length < 2) return
 
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % items.length);
-    }, 4000);
+      setIndex((prev) => (prev + 1) % items.length)
+    }, 4000)
 
-    return () => clearInterval(interval);
-  }, [items]);
+    return () => clearInterval(interval)
+  }, [items])
 
   return (
     <AnimatePresence mode="wait" initial={false}>
@@ -33,5 +33,5 @@ export const FlipText = ({ items, className, ...props }: Props) => {
         {items[index]}
       </motion.p>
     </AnimatePresence>
-  );
-};
+  )
+}

@@ -1,4 +1,4 @@
-import { VSousaLogo } from "@/components/icons/vs0usa-logo";
+import { VSousaLogo } from "@/components/icons/vs0usa-logo"
 
 export const Navbar = () => {
   return (
@@ -7,5 +7,5 @@ export const Navbar = () => {
         <VSousaLogo className="h-6" />
       </div>
     </header>
-  );
-};
+  )
+}

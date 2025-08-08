@@ -1,5 +1,5 @@
-import type { ComponentProps } from "react";
-import { cn } from "@/utils/cn";
+import type { ComponentProps } from "react"
+import { cn } from "@/utils/cn"
 
 export const DotPattern = ({ className, ...props }: ComponentProps<"div">) => (
   <div
@@ -9,4 +9,4 @@ export const DotPattern = ({ className, ...props }: ComponentProps<"div">) => (
     )}
     {...props}
   />
-);
+)

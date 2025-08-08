@@ -1,6 +1,6 @@
-import { BracesIcon, GlobeIcon, MailIcon, MapPinIcon } from "lucide-react";
-import Link from "next/link";
-import { MinimalAboutItem } from "@/components/ui/minimal-about-item";
+import { BracesIcon, GlobeIcon, MailIcon, MapPinIcon } from "lucide-react"
+import Link from "next/link"
+import { MinimalAboutItem } from "@/components/ui/minimal-about-item"
 
 export const MinimalAbout = () => {
   return (
@@ -28,5 +28,5 @@ export const MinimalAbout = () => {
         </Link>
       </MinimalAboutItem>
     </div>
-  );
-};
+  )
+}
