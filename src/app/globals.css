@@ -34,6 +34,10 @@
   * {
     @apply text-default border-default;
   }
+
+  b {
+    @apply text-default;
+  }
 }
 
 @layer components {
