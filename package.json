@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.4",
-    "@cloudflare/workers-types": "^4.20250807.0",
+    "@cloudflare/workers-types": "^4.20250809.0",
     "@types/country-flag-icons": "^1.2.2",
     "@types/node": "^24.2.0",
     "@types/react": "^19.1.9",
