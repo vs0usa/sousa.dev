@@ -5,6 +5,7 @@ import { LinePattern } from "@/components/patterns/line-pattern"
 import { About } from "@/components/sections/about"
 import { MinimalAbout } from "@/components/sections/minimal-about"
 import { Socials } from "@/components/sections/socials"
+import { Stack } from "@/components/sections/stack"
 import { FlipFlags } from "@/components/ui/flip-flags"
 import { FlipText } from "@/components/ui/flip-text"
 import { Separator } from "@/components/ui/separator"
@@ -49,6 +50,9 @@ export default function Page() {
       <Socials />
       <Separator />
       <About />
+      <Separator />
+      <Stack />
+      <Separator />
     </div>
   )
 }
