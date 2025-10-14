@@ -38,6 +38,6 @@
     "@types/react-dom": "^19.2.2",
     "knip": "^5.65.0",
     "typescript": "^5.9.3",
-    "wrangler": "^4.42.2"
+    "wrangler": "^4.43.0"
   }
 }
