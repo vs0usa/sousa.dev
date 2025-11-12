@@ -33,7 +33,7 @@
     "@biomejs/biome": "2.2.7",
     "@cloudflare/workers-types": "^4.20251111.0",
     "@types/country-flag-icons": "^1.2.2",
-    "@types/node": "^24.10.0",
+    "@types/node": "^24.10.1",
     "@types/react": "^19.2.3",
     "@types/react-dom": "^19.2.2",
     "knip": "^5.69.0",
