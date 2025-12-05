@@ -20,7 +20,7 @@
     "@tailwindcss/postcss": "^4.1.17",
     "clsx": "^2.1.1",
     "country-flag-icons": "^1.6.4",
-    "lucide-react": "^0.555.0",
+    "lucide-react": "^0.556.0",
     "motion": "^12.23.25",
     "next": "16.0.7",
     "postcss": "^8.5.6",
