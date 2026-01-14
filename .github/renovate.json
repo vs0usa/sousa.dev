@@ -6,5 +6,6 @@
     "enabled": false
   },
   "rangeStrategy": "bump",
-  "automerge": true
+  "automerge": true,
+  "schedule": ["* 0-3 1 * *"]
 }
