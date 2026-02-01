@@ -19,7 +19,7 @@
     "@opennextjs/cloudflare": "^1.14.8",
     "@tailwindcss/postcss": "^4.1.18",
     "clsx": "^2.1.1",
-    "country-flag-icons": "^1.6.4",
+    "country-flag-icons": "^1.6.12",
     "lucide-react": "^0.562.0",
     "motion": "^12.26.2",
     "next": "16.1.5",
