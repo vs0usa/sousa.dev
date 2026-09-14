@@ -1,7 +1,7 @@
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare"
 import type { NextConfig } from "next"
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare"
 
-initOpenNextCloudflareForDev()
+void initOpenNextCloudflareForDev()
 
 const nextConfig: NextConfig = {
   experimental: {

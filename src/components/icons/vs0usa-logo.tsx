@@ -1,10 +1,7 @@
 import type { SVGProps } from "react"
 import { cn } from "@/utils/cn"
 
-export const VSousaLogo = ({
-  className,
-  ...props
-}: SVGProps<SVGSVGElement>) => (
+export const VSousaLogo = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     className={cn("fill-white w-fit", className)}
     xmlns="http://www.w3.org/2000/svg"

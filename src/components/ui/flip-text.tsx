@@ -10,13 +10,17 @@ export const FlipText = ({ items, className, ...props }: Props) => {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    if (items.length < 2) return
+    if (items.length < 2) {
+      return
+    }
 
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % items.length)
     }, 4000)
 
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(interval)
+    }
   }, [items])
 
   return (

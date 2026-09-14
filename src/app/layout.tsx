@@ -3,6 +3,7 @@ import { IBM_Plex_Sans } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "@/components/ui/navbar"
 
+// oxlint-disable-next-line new-cap -- Next.js font loaders are capitalised factory functions
 const font = IBM_Plex_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {

@@ -2,23 +2,21 @@ import type { ComponentProps } from "react"
 import { cn } from "@/utils/cn"
 import { SocialsCard } from "./socials-card"
 
-export const Socials = ({ className, ...props }: ComponentProps<"div">) => {
-  return (
-    <div className={cn("", className)} {...props}>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 border-x">
-        <SocialsCard
-          name="LinkedIn"
-          href="https://www.linkedin.com/in/vitor-gomes-de-sousa/"
-          img="/linkedin.webp"
-          username="vitor-gomes-de-sousa"
-        />
-        <SocialsCard
-          name="GitHub"
-          href="https://github.com/vs0usa"
-          img="/github.webp"
-          username="vs0usa"
-        />
-      </div>
+export const Socials = ({ className, ...props }: ComponentProps<"div">) => (
+  <div className={cn("", className)} {...props}>
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 border-x">
+      <SocialsCard
+        name="LinkedIn"
+        href="https://www.linkedin.com/in/vitor-gomes-de-sousa/"
+        img="/linkedin.webp"
+        username="vitor-gomes-de-sousa"
+      />
+      <SocialsCard
+        name="GitHub"
+        href="https://github.com/vs0usa"
+        img="/github.webp"
+        username="vs0usa"
+      />
     </div>
-  )
-}
+  </div>
+)

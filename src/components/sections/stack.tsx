@@ -20,7 +20,6 @@ const frontend = [
   { name: "Motion", url: "https://motion.dev", icon: "motion" },
   { name: "Expo", url: "https://expo.dev", icon: "expo" },
 ]
-
 const backend = [
   { name: "Node.js", url: "https://nodejs.org/en", icon: "nodejs" },
   { name: "Bun", url: "https://bun.sh", icon: "bun" },
@@ -33,13 +32,11 @@ const backend = [
   { name: "Prisma ORM", url: "https://www.prisma.io/orm", icon: "prisma" },
   { name: "Drizzle ORM", url: "https://orm.drizzle.team", icon: "drizzle-orm" },
 ]
-
 const testing = [
   { name: "Jest", url: "https://jestjs.io", icon: "jest" },
   { name: "Vitest", url: "https://vitest.dev", icon: "vitest" },
   { name: "Playwright", url: "https://playwright.dev", icon: "playwright" },
 ]
-
 const ops = [
   {
     name: "GitHub Actions",
