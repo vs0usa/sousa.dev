@@ -1,5 +1,4 @@
 import { BracesIcon, GlobeIcon, MailIcon, MapPinIcon } from "lucide-react"
-import Link from "next/link"
 import { MinimalAboutItem } from "./minimal-about-item"
 
 export const MinimalAbout = () => (
@@ -11,20 +10,20 @@ export const MinimalAbout = () => (
       <p className="text-balance opacity-80">Paris, France</p>
     </MinimalAboutItem>
     <MinimalAboutItem icon={MailIcon}>
-      <Link
+      <a
         href="mailto:vitor@sousa.dev"
         className="text-balance opacity-80 hover:underline underline-offset-4"
       >
         vitor@sousa.dev
-      </Link>
+      </a>
     </MinimalAboutItem>
     <MinimalAboutItem icon={GlobeIcon}>
-      <Link
+      <a
         href="https://sousa.dev"
         className="text-balance opacity-80 hover:underline underline-offset-4"
       >
         sousa.dev
-      </Link>
+      </a>
     </MinimalAboutItem>
   </div>
 )

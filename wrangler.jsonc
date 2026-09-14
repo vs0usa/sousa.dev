@@ -1,17 +1,10 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "main": ".open-next/worker.js",
   "name": "vs0usa",
-  "compatibility_date": "2025-07-08",
+  "main": "@tanstack/react-start/server-entry",
+  "compatibility_date": "2026-09-14",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
-  "assets": {
-    "directory": ".open-next/assets",
-    "binding": "ASSETS",
+  "observability": {
+    "enabled": true,
   },
-  "services": [
-    {
-      "binding": "WORKER_SELF_REFERENCE",
-      "service": "vs0usa",
-    },
-  ],
 }
