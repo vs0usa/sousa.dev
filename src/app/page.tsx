@@ -35,9 +35,7 @@ export default function Page() {
               z-10 text-subtle/10 text-xs pl-4 font-mono line-clamp-1
             </p>
           </div>
-          <h3 className="pl-4 border-y text-3xl font-semibold py-1">
-            Vitor Sousa
-          </h3>
+          <h3 className="pl-4 border-y text-3xl font-semibold py-1">Vitor Sousa</h3>
           <FlipText
             className="pl-4 text-subtle py-1 font-mono text-sm"
             items={["Développeur fullstack", "Écrire le monde en lignes"]}

@@ -14,7 +14,9 @@ export const FlipFlags = () => {
       setIndex((prev) => (prev + 1) % flags.length)
     }, 4000)
 
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(interval)
+    }
   }, [])
 
   return (
@@ -23,9 +25,7 @@ export const FlipFlags = () => {
         <AnimatePresence mode="wait" initial={false}>
           <motion.span
             key={`current-flag-${index}`}
-            className={cn(
-              "select-none absolute inset-0 h-7 sm:h-9 w-[42px] sm:w-[54px]",
-            )}
+            className={cn("select-none absolute inset-0 h-7 sm:h-9 w-[42px] sm:w-[54px]")}
             initial={{ y: -8, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 8, opacity: 0 }}
