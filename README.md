@@ -11,7 +11,6 @@ This is a continuously evolving side project where I experiment with new technol
 - TanStack Start: Type-safe full-stack React framework with SSR, built on Vite
 - Tailwind CSS v4: Modern utility-first CSS framework for styling
 - shadcn/ui: Pre-built components with beautiful design and accessibility
-- Cloudflare Workers: Deployed to the edge, server-rendered on every request
 
 ## License
 

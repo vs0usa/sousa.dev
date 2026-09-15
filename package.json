@@ -7,13 +7,12 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
+    "start": "node .output/server/index.mjs",
     "lint": "oxlint -c oxlint.config.ts",
     "lint:fix": "oxlint -c oxlint.config.ts --fix",
     "format": "oxfmt -c oxfmt.config.ts",
     "format:check": "oxfmt -c oxfmt.config.ts --check",
-    "knip": "knip",
-    "deploy": "vite build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "knip": "knip"
   },
   "dependencies": {
     "@fontsource-variable/ibm-plex-sans": "^5.3.0",
@@ -29,7 +28,6 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.54.8",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@tailwindcss/vite": "^4.3.3",
     "@types/country-flag-icons": "^1.2.2",
@@ -38,12 +36,12 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.1",
     "knip": "^6.35.1",
+    "nitro": "3.0.260903-beta",
     "oxfmt": "^0.67.0",
     "oxlint": "^1.82.0",
     "oxlint-tsgolint": "^7.0.2001",
     "typescript": "^7.0.2",
-    "vite": "^8.3.0",
-    "wrangler": "^4.131.1"
+    "vite": "^8.3.0"
   },
   "packageManager": "pnpm@12.4.1"
 }
