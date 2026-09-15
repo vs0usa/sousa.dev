@@ -1,14 +1,5 @@
 name: Dependabot automerge
 
-# Runs after CI has finished rather than on the pull request itself, so a merge
-# only happens once every job has genuinely passed.
-#
-# The previous version called `gh pr merge --auto` from pull_request_target.
-# That failed on every Dependabot pull request, because auto-merge is not
-# enabled on this repository. Enabling it would have been worse: with no
-# required status checks configured, auto-merge lands a pull request as soon as
-# it is mergeable, without waiting for CI. Gating here keeps that decision in
-# the workflow rather than in repository settings.
 on:
   workflow_run:
     workflows: [CI]
