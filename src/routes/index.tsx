@@ -1,4 +1,4 @@
-import Image from "next/image"
+import { createFileRoute } from "@tanstack/react-router"
 import { VSousaLogo } from "@/components/icons/vs0usa-logo"
 import { DotPattern } from "@/components/patterns/dot-pattern"
 import { LinePattern } from "@/components/patterns/line-pattern"
@@ -10,7 +10,11 @@ import { FlipFlags } from "@/components/ui/flip-flags"
 import { FlipText } from "@/components/ui/flip-text"
 import { Separator } from "@/components/ui/separator"
 
-export default function Page() {
+export const Route = createFileRoute("/")({
+  component: Home,
+})
+
+function Home() {
   return (
     <div className="mx-auto md:max-w-3xl">
       <div className="relative h-64 border-x flex items-center justify-center">
@@ -20,12 +24,14 @@ export default function Page() {
       <div className="flex screen-lines after:hidden">
         <div className="border-x my-px p-[3] relative overflow-clip">
           <FlipFlags />
-          <Image
+          <img
             className="rounded-full size-24 md:size-40 ring ring-offset-2 ring-offset-default ring-neutral-700 z-40 min-w-24 object-cover md:min-w-40"
             src="/photo.jpg"
             width={256}
             height={256}
             alt="Vitor Sousa's photo"
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
         <div className="border-r w-full flex justify-end flex-col overflow-y-hidden">
@@ -35,7 +41,7 @@ export default function Page() {
               z-10 text-subtle/10 text-xs pl-4 font-mono line-clamp-1
             </p>
           </div>
-          <h3 className="pl-4 border-y text-3xl font-semibold py-1">Vitor Sousa</h3>
+          <h1 className="pl-4 border-y text-3xl font-semibold py-1">Vitor Sousa</h1>
           <FlipText
             className="pl-4 text-subtle py-1 font-mono text-sm"
             items={["Développeur fullstack", "Écrire le monde en lignes"]}

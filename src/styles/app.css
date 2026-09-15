@@ -1,6 +1,9 @@
+@import "@fontsource-variable/ibm-plex-sans/wght.css";
 @import "tailwindcss";
 
 @theme inline {
+  --font-sans: "IBM Plex Sans Variable", ui-sans-serif, system-ui, sans-serif;
+
   --color-default: var(--background);
   --color-subtle: var(--background-subtle);
 
@@ -28,7 +31,7 @@
 
 @layer base {
   body {
-    @apply bg-default;
+    @apply bg-default font-sans;
   }
 
   * {

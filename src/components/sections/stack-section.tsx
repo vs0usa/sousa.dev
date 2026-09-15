@@ -1,5 +1,3 @@
-import Image from "next/image"
-import Link from "next/link"
 import { DotPattern } from "@/components/patterns/dot-pattern"
 
 interface Props {
@@ -16,19 +14,22 @@ export const StackSection = ({ name, items }: Props) => (
     </div>
     <div className="flex flex-wrap gap-4 select-none items-center p-2 pr-4 w-full relative max-sm:pt-6">
       {items.map(({ name: itemName, url, icon }) => (
-        <Link
+        <a
           key={itemName}
           href={url}
           className="hover:opacity-80 hover:cursor-pointer transition-opacity z-10"
+          rel="noopener noreferrer"
         >
-          <Image
+          <img
             className="max-h-7"
-            src={`brands/${icon}.svg`}
+            src={`/brands/${icon}.svg`}
             alt={itemName}
             width={28}
             height={28}
+            loading="lazy"
+            decoding="async"
           />
-        </Link>
+        </a>
       ))}
       <DotPattern />
     </div>

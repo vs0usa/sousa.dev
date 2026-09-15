@@ -1,6 +1,7 @@
 import { defineConfig } from "oxlint"
 
 export default defineConfig({
+  ignorePatterns: ["src/routeTree.gen.ts"],
   plugins: ["eslint", "typescript", "unicorn", "oxc", "import", "node", "promise"],
   jsPlugins: ["@stylistic/eslint-plugin"],
   options: {

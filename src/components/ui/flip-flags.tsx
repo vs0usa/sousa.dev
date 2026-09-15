@@ -1,5 +1,3 @@
-"use client"
-
 import { FR, PT } from "country-flag-icons/react/3x2"
 import { AnimatePresence, motion } from "motion/react"
 import { useEffect, useState } from "react"

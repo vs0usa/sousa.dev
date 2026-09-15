@@ -1,5 +1,3 @@
-"use client"
-
 import { AnimatePresence, type HTMLMotionProps, motion } from "motion/react"
 import { useEffect, useState } from "react"
 import { cn } from "@/utils/cn"

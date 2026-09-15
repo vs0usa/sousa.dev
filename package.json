@@ -4,46 +4,44 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
-    "start": "next start",
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node .output/server/index.mjs",
     "lint": "oxlint -c oxlint.config.ts",
     "lint:fix": "oxlint -c oxlint.config.ts --fix",
     "format": "oxfmt -c oxfmt.config.ts",
     "format:check": "oxfmt -c oxfmt.config.ts --check",
-    "knip": "knip",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "knip": "knip"
   },
   "dependencies": {
-    "@opennextjs/cloudflare": "^1.20.6",
-    "@tailwindcss/postcss": "^4.3.3",
+    "@fontsource-variable/ibm-plex-sans": "^5.3.0",
+    "@tanstack/react-router": "^1.170.35",
+    "@tanstack/react-start": "^1.168.52",
     "clsx": "^2.1.1",
     "country-flag-icons": "^1.6.20",
     "lucide-react": "^0.562.0",
     "motion": "^12.26.2",
-    "next": "16.3.5",
-    "postcss": "^8.5.26",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260114.0",
     "@stylistic/eslint-plugin": "^5.10.0",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/country-flag-icons": "^1.2.2",
     "@types/node": "^25.0.8",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
     "knip": "^6.35.1",
+    "nitro": "3.0.260903-beta",
     "oxfmt": "^0.67.0",
     "oxlint": "^1.82.0",
     "oxlint-tsgolint": "^7.0.2001",
     "typescript": "^7.0.2",
-    "wrangler": "^4.131.1"
+    "vite": "^8.3.0"
   },
   "packageManager": "pnpm@12.4.1"
 }
