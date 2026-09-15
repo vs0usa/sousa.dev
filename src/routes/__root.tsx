@@ -9,8 +9,6 @@ import { jsonLd, SITE_LANG, seoLinks, seoMeta } from "@/utils/seo"
 export const Route = createRootRoute({
   head: () => ({
     links: [
-      // Preload the one subset the page actually uses so the text paints with
-      // the right font without waiting on the stylesheet to be parsed first.
       {
         as: "font",
         crossOrigin: "anonymous",
@@ -33,7 +31,6 @@ function RootDocument({ children }: { children: ReactNode }) {
         <HeadContent />
         <script
           type="application/ld+json"
-          // oxlint-disable-next-line react/no-danger -- JSON-LD has to be injected as raw text
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>

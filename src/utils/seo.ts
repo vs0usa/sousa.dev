@@ -1,12 +1,8 @@
-// Absolute origin. Open Graph and Twitter require fully qualified URLs, and
-// canonical/sitemap entries must agree with the domain the site is served from.
 const SITE_URL = "https://sousa.dev"
 const SITE_NAME = "Vitor Sousa"
 const SITE_TITLE = "Vitor Sousa - Développeur fullstack"
 const SITE_DESCRIPTION = "Qui je suis, ce que je fais et sais faire."
 
-// The content is written in French, so the document language and the Open
-// Graph locale both have to say so.
 export const SITE_LANG = "fr"
 
 const SITE_LOCALE = "fr_FR"
@@ -47,14 +43,12 @@ export const seoMeta: readonly MetaTag[] = [
   { content: SITE_NAME, name: "apple-mobile-web-app-title" },
   { content: "yes", name: "mobile-web-app-capable" },
 
-  // Let search engines index the page and show full-size previews.
   { content: "index, follow", name: "robots" },
   {
     content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     name: "googlebot",
   },
 
-  // Open Graph.
   { content: "profile", property: "og:type" },
   { content: `${SITE_URL}/`, property: "og:url" },
   { content: SITE_TITLE, property: "og:title" },
@@ -71,8 +65,6 @@ export const seoMeta: readonly MetaTag[] = [
   { content: "Sousa", property: "profile:last_name" },
   { content: "vs0usa", property: "profile:username" },
 
-  // Twitter / X. No handle is claimed here, so twitter:site and
-  // twitter:creator are deliberately omitted rather than guessed.
   { content: "summary_large_image", name: "twitter:card" },
   { content: SITE_TITLE, name: "twitter:title" },
   { content: SITE_DESCRIPTION, name: "twitter:description" },
@@ -90,8 +82,6 @@ export const seoLinks: readonly LinkTag[] = [
   { href: `${SITE_URL}/sitemap.xml`, rel: "sitemap", type: "application/xml" },
 ]
 
-// Structured data. A @graph keeps the Person, the site and the page as
-// separate linked nodes, which is what rich-result parsers expect.
 export const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
