@@ -1,0 +1,40 @@
+version: 2
+
+updates:
+  # npm dependencies (resolved through the pnpm lockfile).
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    # Matches Renovate's rangeStrategy "bump": widen the ^ range in
+    # package.json rather than only touching the lockfile.
+    versioning-strategy: increase
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: chore(deps)
+      prefix-development: chore(deps-dev)
+    groups:
+      # Everything non-major collapses into one PR. Majors are deliberately
+      # left out of the group so Dependabot opens one PR per major.
+      npm:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+  # Workflow action pins (actions/checkout, actions/setup-node, pnpm/action-setup).
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: ci(deps)
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
