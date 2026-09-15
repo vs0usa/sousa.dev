@@ -1,10 +1,18 @@
 name: Dependabot automerge
 
-# Replaces Renovate's automerge: true. Runs on pull_request_target because the
-# GITHUB_TOKEN handed to workflows on Dependabot pull_request events is
-# read-only. Nothing from the PR branch is checked out or executed here, which
-# is what makes pull_request_target safe in this workflow.
-on: pull_request_target
+# Runs after CI has finished rather than on the pull request itself, so a merge
+# only happens once every job has genuinely passed.
+#
+# The previous version called `gh pr merge --auto` from pull_request_target.
+# That failed on every Dependabot pull request, because auto-merge is not
+# enabled on this repository. Enabling it would have been worse: with no
+# required status checks configured, auto-merge lands a pull request as soon as
+# it is mergeable, without waiting for CI. Gating here keeps that decision in
+# the workflow rather than in repository settings.
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
 
 permissions:
   contents: write
@@ -12,14 +20,30 @@ permissions:
 
 jobs:
   automerge:
-    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
-      # Queues the PR to merge once every required status check passes. This
-      # needs "Allow auto-merge" enabled on the repository, and CI listed as
-      # required, otherwise the PR merges immediately without waiting.
-      - name: Enable auto-merge
-        run: gh pr merge --squash --auto "$PR_URL"
+      - name: Merge the pull request when Dependabot opened it
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_URL: ${{ github.event.pull_request.html_url }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          number=$(
+            gh pr list --repo "$REPO" --state open --json number,headRefOid,author \
+              --jq "[
+                .[]
+                | select(.headRefOid == \"$HEAD_SHA\")
+                | select(.author.login == \"app/dependabot\" or .author.login == \"dependabot[bot]\")
+              ] | first | .number // empty"
+          )
+
+          if [ -z "$number" ]; then
+            echo "No open Dependabot pull request at $HEAD_SHA. Nothing to merge."
+            exit 0
+          fi
+
+          echo "CI passed for Dependabot pull request #$number; merging."
+          gh pr merge --repo "$REPO" --squash --delete-branch "$number"
