@@ -12,6 +12,6 @@ export default defineConfig({
     tailwindcss(),
     tanstackStart({ srcDirectory: "src", prerender: { enabled: true, crawlLinks: true } }),
     react(),
-    nitro(),
+    nitro({ preset: "node-server" }),
   ],
 })
